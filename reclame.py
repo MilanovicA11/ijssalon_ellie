@@ -65,6 +65,3 @@ invoer_lijst = [10, 5, 3, 2, 1, 2, 9]
 
 
 meervoudig(invoer_lijst)
-
-# vraag 12 van les 8
-
