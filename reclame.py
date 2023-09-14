@@ -1,10 +1,70 @@
-from algemene_functies import mijn_functie_2
+# vraag 5 van les 8
 
-def combinatie(invoer_lijst_2):
-    def meervoudig(invoer_lijst):
-        hoogste = max(invoer_lijst)
-        laagste = min(invoer_lijst)
-        return hoogste, laagste
+def aanbieding_1(smaak, prijs, korting):
+    prijs_na_korting = prijs * (1 - korting)
+    uitvoer = f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {prijs_na_korting} euro."
+    return uitvoer
 
-invoer_lijst_2 = [2, 4, 5, 6, 6, 3]
+
+aanbieding_1("aardbei", 4, 0.1)
+
+# vraag 6 en 7 van les 8
+
+def inkomsten_totaal(inkomsten, btw):
+    totaal = 0
+    for bedrag in inkomsten:
+        totaal += bedrag
+    btw_bedrag = totaal * btw
+    uitvoer = f"Het totaal van alle inkomsten van deze week is {totaal} euro, waarover {btw_bedrag} euro btw betaald dient te worden."
+    return uitvoer
+
+inkomsten = [220, 430, 125, 160, 205, 90, 345]
+btw = 0.09
+
+
+inkomsten_totaal(inkomsten, btw)
+
+# vraag 8 van les 8
+
+def laag_en_hoog(mijn_lijst):
+    uitvoer = []
+    laagste = min(mijn_lijst)
+    hoogste = max(mijn_lijst)
+    uitvoer.append(laagste)
+    uitvoer.append(hoogste)
+    return uitvoer
+
+mijn_lijst = [220, 430, 125, 160, 205, 90, 345]
+
+
+laag_en_hoog(mijn_lijst)
+
+# vraag 9 en 10 van les 8
+
+def gemiddelde(mijn_lijst):
+    aantal = len(mijn_lijst)
+    totaal = 0
+    for element in mijn_lijst:
+        totaal += element
+    gemiddelde = totaal / aantal
+    return f"De gemiddelde inkomsten deze week zijn {gemiddelde} euro."
+
+mijn_lijst = [220, 430, 125, 160, 205, 90, 345]
+
+
+gemiddelde(mijn_lijst)
+
+# vraag 11 van les 8
+
+def meervoudig(invoer_lijst):
+    tijdelijk = laag_en_hoog(invoer_lijst)
+    uitvoer = [tijdelijk[0],tijdelijk[1]]
+    return uitvoer
+
+invoer_lijst = [10, 5, 3, 2, 1, 2, 9]
+
+
+meervoudig(invoer_lijst)
+
+# vraag 12 van les 8
 

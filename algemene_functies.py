@@ -1,8 +1,16 @@
-def mijn_functie_2(a,b):
+def mijn_functie_1():
+    return a ** a
+
+a = 2
+
+
+mijn_functie_1()
+
+def mijn_functie_2():
     return [(a+b), (a-b), (a*b), (a/b)]
 
 a = 12
 b = 3
 
-result = mijn_functie_2(a,b)
-print(result)
+
+mijn_functie_2()
